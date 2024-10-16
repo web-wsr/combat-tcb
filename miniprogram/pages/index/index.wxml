@@ -1,0 +1,4 @@
+<!--pages/index/index.wxml-->
+<view class="page-container">
+  <custom-topics topics="{{topics}}"></custom-topics>
+</view>

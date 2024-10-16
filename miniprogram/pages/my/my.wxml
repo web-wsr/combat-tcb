@@ -1,0 +1,53 @@
+<!--pages/my/my.wxml-->
+<view class="page_container ">
+  <view class="top_bg">
+  </view>
+  <view class="main_content">
+    <view class="login-content" wx:if="{{ !loading }}">
+      <view class="{{logger? 'userinfo_login' : 'userinfo_container'}}">
+      <block wx:if="{{ !logger }}">
+        <button class="userAvatar" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+          <image class="avatar" src="{{avatarUrl ? avatarUrl: '../../images/icons/avatar.jpg'}}" mode="widthFix" />
+        </button>
+        <input type="text" value="{{nickName}}" bindinput="valueInput" placeholder="请输入昵称" class="name-input" />
+        <button class="username" size="mini" bindtap="loginSys">点击登录</button>
+      </block>
+      <block wx:if="{{ logger }}">
+        <image class="vip" src="../../images/icons/皇冠.png" mode="" />
+        <image class="avatar" src="{{avatarUrl}}" mode="widthFix" />
+        <view class="username">{{ nickName }}</view>
+      </block>
+    </view>
+    <view wx:if="{{ logger }}" class="settings_container">
+      <navigator class="setting_item" url="/pages/create/create">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/share-icon.svg" />
+          <view class="setting_text">发布微博</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </navigator>
+      <navigator class="setting_item" url="/pages/my_topic/my_topic">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/sh-my-wb.svg" />
+          <view class="setting_text">我的微博</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </navigator>
+      <navigator class="setting_item" url="/pages/my_reply/my_reply">
+        <view class="left">
+          <image class="setting_icon" src="../../images/icons/reply-icon.svg" />
+          <view class="setting_text">我的回复</view>
+        </view>
+        <image class="arrow_icon" src="../../images/arrow.svg" />
+      </navigator>
+    </view>
+    </view>
+    <view class="loading" wx:if="{{loading}}">
+      <view class="dot"></view>
+      <view class="dot"></view>
+      <view class="dot"></view>
+      <view class="dot"></view>
+    </view>
+  </view>
+  <cloud-tip-modal showUploadTipProps="{{showUploadTip}}" />
+</view>

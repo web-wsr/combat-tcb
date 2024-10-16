@@ -1,0 +1,44 @@
+{
+  "setting": {
+    "compileHotReLoad": true,
+    "urlCheck": true
+  },
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "详情页",
+          "pathName": "pages/detail/detail",
+          "query": "id=9c1e6a31670e2bcf0f91c8fe2228296c",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
+          "name": "首页-快速开始",
+          "pathName": "pages/index/index",
+          "query": ""
+        },
+        {
+          "name": "商品列表",
+          "pathName": "pages/goods-list/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "云开发示例",
+          "pathName": "pages/examples/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/user-center/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  },
+  "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+  "projectname": "combat-tcb"
+}

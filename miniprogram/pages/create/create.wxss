@@ -1,0 +1,65 @@
+/* pages/create/create.wxss */
+.page-container {
+    padding: 50rpx 40rpx;
+}
+.form-section {
+    margin-bottom: 10rpx;
+}
+.form-section .form-textarea {
+    display: block;
+    height: 80px;
+    width: 100%;
+    font-size: 14px;
+    color: #333;
+    line-height: 20px;
+}
+
+.resource-section .resource-item {
+    position: relative;
+    display: inline-block;
+    width: 194rpx;
+    height: 194rpx;
+    background-color: #f5f5f5;
+    margin-right: 12rpx;
+}
+
+.resource-item.resource-item_add::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 2px;
+    height: 30%;
+    background-color: #a9a9a9;
+}
+.resource-item.resource-item_add:after{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 30%;
+    height: 2px;
+    background-color: #a9a9a9;
+  }
+
+  /*按钮模块*/
+.btn-section{
+    text-align: right;
+    margin-top: 80rpx;
+  }
+  
+  .btn-section .submit-btn{
+    display: inline-block;
+    width: 180rpx;
+    height: 80rpx;
+    color: #fff;
+    font-size: 16px;
+    line-height: 50rpx;
+    border-radius: 0;
+  }
+  
+  .btn-section .submit-btn_hover{
+    opacity: .8;
+  }
